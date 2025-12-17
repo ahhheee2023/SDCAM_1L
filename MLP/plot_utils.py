@@ -92,7 +92,7 @@ def plot_beta_comparison(histories: List[Dict],
     xdiff_path = os.path.join(save_dir, "x_diff_comparison.png")
     plt.savefig(xdiff_path, dpi=300, bbox_inches='tight')
     plt.close(fig)
-    print(f"(1/μ) * x_diff plot saved to: {xdiff_path}")
+    print(f"(1/mu) * x_diff plot saved to: {xdiff_path}")
 
 
 def print_summary(optimizers: List, beta_0_values: List[float]):
