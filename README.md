@@ -28,7 +28,7 @@ Required: `Python 3.8` or higher.
 | Library | Purpose |
 | :--- | :--- |
 | **JAX** | High-performance autodiff & Vector-Jacobian Product |
-| **NumPy** | Newton-based $L_p$ proximal mapping logic |
+| **NumPy** | Newton-based $\ell_p$ proximal mapping logic |
 | **Matplotlib** | Convergence and performance visualization |
 
 ---
@@ -51,7 +51,7 @@ $$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambd
 * **`problem.py`**: Defines the `OptimizationProblem` class. It contains objective function calculations, constraint projections, and leverages JAX for automatic differentiation and Vector-Jacobian Products.
 * **`mlp.py`**: Implements the Multi-Layer Perceptron with 3 layers and activation functions using JAX.
 * **`data_loader.py`**: Handles loading and preprocessing the MNIST dataset, including normalization and subset selection.
-* **`plot_utils.py`**: Provides utilities for plotting convergence curves (Objective value, $\|c(x)-y\|$, etc.) and printing result summaries.
+* **`plot_utils.py`**: Provides utilities for plotting convergence curves (Objective value, $\\|c(x)-y\\|$, etc.) and printing result summaries.
 
 #### **Usage**
 ```bash
@@ -66,12 +66,12 @@ python main.py
 The objective is to solve the following optimization problem:
 
 $$\begin{aligned}
-\min_{x\in \mathbb{R}^n} \quad & \frac{1}{2} x^TQ_0x+ b_0^Tx+ \alpha \|x\|^p_p, \\
+\min_{x\in \mathbb{R}^n} \quad & \frac{1}{2} x^TQ_0x+ b_0^Tx+ \alpha \\|x\\|^p_p, \\
 \text{s.t.} \quad & \frac{1}{2} x^TQ_ix+ b_i^Tx+ r_i \le 0, \quad i=1,2,\cdots, m, \\
-& \|x\|_\infty \le r,
+& \\|x\\|_\infty \le r,
 \end{aligned}$$
 
-**Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices, $c_i$ are constraints constants , $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint.
+**Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices, $c_i$ are constraints constants for $i=1,cdots,m$, $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint.
 
 #### **Code Structure**
 * **`run_code.py`**: running QCQP experiments, supporting tests for different $p$ values and $\beta_0$ settings.
