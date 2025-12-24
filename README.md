@@ -66,15 +66,15 @@ python main.py
 The objective is to solve the following optimization problem:
 
 $$\begin{aligned}
-\min_{x\in \mathbb{R}^n} \quad & \frac{1}{2} x^TQ_0x+ b_0^Tx+ \alpha \|x\|^p_p \\
-\text{s.t.} \quad & \frac{1}{2} x^TQ_ix+ b_i^Tx+ r_i \le 0, \quad i=1,2,\cdots, m \\
-& \|x\|_\infty \le r
+\min_{x\in \mathbb{R}^n} \quad & \frac{1}{2} x^TQ_0x+ b_0^Tx+ \alpha \|x\|^p_p, \\
+\text{s.t.} \quad & \frac{1}{2} x^TQ_ix+ b_i^Tx+ r_i \le 0, \quad i=1,2,\cdots, m, \\
+& \|x\|_\infty \le r,
 \end{aligned}$$
 
 **Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices, $c_i$ are constraints constants , $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint.
 
 #### **Code Structure**
-* ** `run_code.py`**: The main script to execute QCQP experiments, supporting tests for different $p$ values and $\beta_0$ settings.
+* **`run_code.py`**: The main script to execute QCQP experiments, supporting tests for different $p$ values and $\beta_0$ settings.
 * **`sdcam_1l.py`**:  Core solver implementing the $\text{SDCAM}_{\mathbb{1}\ell}$ algorithm for the QCQP model, including feasibility checks and dual variable updates.
 * **`create_problem3.py`**: Generates the synthetic QCQP problem instance, including matrices $Q_i$, vectors $b_i$, and the reference point $\bar{x}$.
 * **`lp_prox_mapping.py`**: Implements the Newton-based root-finding scheme for the $L_p$ proximal mapping with $\ell_\infty$ norm constraints.
