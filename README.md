@@ -27,7 +27,7 @@ Required: `Python 3.8` or higher.
 ### **Dependencies**
 | Library | Purpose |
 | :--- | :--- |
-| **JAX** | High-performance autodiff & Vector-Jacobian Product ($VJP$) |
+| **JAX** | High-performance autodiff & Vector-Jacobian Product |
 | **NumPy** | Newton-based $L_p$ proximal mapping logic |
 | **Matplotlib** | Convergence and performance visualization |
 
@@ -36,7 +36,7 @@ Required: `Python 3.8` or higher.
 ## 3. Projects Organization
 
 ### **Project 1: MLP**
-<font size="4">This project applies the algorithm to a Multi-Layer Perceptron (MLP) architecture using the MNIST dataset.</font>
+<font size="4">This project applies the algorithm to a Multi-Layer Perceptron (MLP) using the MNIST dataset.</font>
 
 #### **Mathematical Formulation**
 The objective is to solve the following optimization problem:
