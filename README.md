@@ -47,7 +47,7 @@ $$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambd
 
 #### **Code Structure**
 * **`main.py`**: The entry point of the project. It loads the dataset, initializes the MLP, and runs the SDCAM optimization with different $\beta_0$ values.
-* **`sdcam.py`**: Contains the `SDCAM_1L` class, implementing the core idea of SDCAM$_{\mathds{1}\ell}$.
+* **`sdcam.py`**: Contains the `SDCAM_1L` class, implementing the core idea of SDCAM$_{\mathbb{1}\ell}$.
 * **`problem.py`**: Defines the `OptimizationProblem` class. It contains objective function calculations, constraint projections, and leverages JAX for automatic differentiation and Vector-Jacobian Products.
 * **`mlp.py`**: Implements the Multi-Layer Perceptron with 3 layers and activation functions using JAX.
 * **`data_loader.py`**: Handles loading and preprocessing the MNIST dataset, including normalization and subset selection.
