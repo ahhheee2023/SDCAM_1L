@@ -46,7 +46,7 @@ $$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambd
 **Where:**
 * **$v$**: the MLP parameters.
 * **$\rho(u) = \frac{|u|^p}{p}$**: the loss function where $0 < p \le 1$.
-* **$C = \{x : \|x\|_\infty \le \mathcal{C}\}$**: the $\ell_\infty$-ball constraint.
+* **$C$**: the $\ell_\infty$-ball constraint.
 * **$\lambda$**: the regularization coefficient for $L_1$ penalty.
 
 #### **Algorithm Settings**
