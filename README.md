@@ -65,7 +65,11 @@ python main.py
 #### **Mathematical Formulation**
 The objective is to solve the following optimization problem:
 
-$$\min_{x} \frac{1}{2} x^T Q_0 x + b_0^T x + \alpha \|x\|_p^p \quad \text{s.t. } \frac{1}{2} x^T Q_i x + b_i^T x + c_i \le 0, \quad \|x\|_\infty \le r$$
+$$\begin{aligned}
+\min_{x\in \mathbb{R}^n} \quad & \frac{1}{2} x^TQ_0x+ b_0^Tx+ \alpha \|x\|^p_p \\
+\text{s.t.} \quad & \frac{1}{2} x^TQ_ix+ b_i^Tx+ r_i \le 0, \quad i=1,2,\cdots, m \\
+& \|x\|_\infty \le r
+\end{aligned}$$
 
 **Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices constructed via random orthogonal matrices and diagonal matrices, $c_i$ are constraints constants derived from a reference minimizer $\bar{x}$, $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint defined by $\|\bar{x}\|_\infty$.
 
