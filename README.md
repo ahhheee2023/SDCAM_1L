@@ -77,7 +77,7 @@ $$\begin{aligned}
 * **`run_code.py`**: running QCQP experiments, supporting tests for different $p$ values and $\beta_0$ settings.
 * **`sdcam_1l.py`**:  Core solver implementing the $\text{SDCAM}_{\mathbb{1}\ell}$ algorithm for the QCQP model.
 * **`create_problem3.py`**: Generating the  QCQP problem instance, including matrices $Q_i$, vectors $b_i$, for $i=0,\cdots,m$, and the $r$.
-* **`lp_prox_mapping.py`**: Implementing the Newton-based root-finding scheme for the $\ell_p$ proximal mapping with $\ell_\infty$ norm constraints.
+* **`lp_prox_mapping.py`**: Implementing the $\ell_p$ proximal mapping with $\ell_\infty$ norm constraints.
 
 #### **Usage**
 ```bash
