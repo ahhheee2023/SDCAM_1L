@@ -56,9 +56,10 @@ $$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambd
 #### **Usage**
 ```bash
 python main.py
+```
 
 
-### **Project 2: MLP**
+### **Project 2: QCQP**
 <font size="4">Implementation of the algorithm for solving a penalized Quadratically Constrained Quadratic Program (QCQP).</font>
 
 #### **Mathematical Formulation**
