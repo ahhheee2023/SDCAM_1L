@@ -44,6 +44,7 @@ The objective is to solve the following optimization problem:
 $$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambda \|v\|_1$$
 
 **Where:**
+* **$m$**: the number of samples in the dataset.
 * **$v$**: the MLP parameters.
 * **$\rho(u) = \frac{|u|^p}{p}$**: the loss function where $0 < p \le 1$.
 * **$C$**: the $\ell_\infty$-ball constraint.
