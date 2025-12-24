@@ -1,12 +1,16 @@
 # <h1 align="center">SDCAM Numerical Experiments</h1>
 
-# <h1 align="center">SDCAM Numerical Experiments</h1>
+<p align="center">
+  <b>Implementation of the</b>
+</p>
 
-<div align="center">
-  <b>Implementation of the SDCAM$_{\mathds{1}\ell}$ Algorithm</b><br>
+$$ 
+\large \text{SDCAM}_{\mathbb{1}\ell} 
+$$
+
+<p align="center">
   <i>Verified on Python 3.8+ | Powered by JAX & NumPy</i>
-</div>
-
+</p>
 ---
 
 ## 📄 1. Reference Paper
