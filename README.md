@@ -43,7 +43,7 @@ The objective is to solve the following optimization problem:
 
 $$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambda \\|v\\|_1$$
 
-**Where** $v$ represents the MLP parameters, $m$ represents the number of samples in the dataset, $\rho(u) = \frac{|u|^p}{p}$ is the loss function where $0 < p \le 1$, $C$ is the $\ell_\infty$-ball constraint, and $\lambda$ is the regularization coefficient for $L_1$ penalty.
+**Where** $v$ represents the MLP parameters, $m$ represents the number of samples in the dataset, $\rho(u) = \frac{|u|^p}{p}$ is the loss function where $0 < p \le 1$, $C$ is the $\ell_\infty$-ball constraint, and $\lambda$ is the regularization coefficient for $\ell_1$ penalty.
 
 #### **Code Structure**
 * **`main.py`**: The entry point of the project. It loads the dataset, initializes the MLP, and runs the SDCAM optimization with different $\beta_0$ values.
@@ -67,11 +67,11 @@ The objective is to solve the following optimization problem:
 
 $$\begin{aligned}
 \min_{x\in \mathbb{R}^n} \quad & \frac{1}{2} x^TQ_0x+ b_0^Tx+ \alpha \\|x\\|^p_p, \\
-\text{s.t.} \quad & \frac{1}{2} x^TQ_ix+ b_i^Tx+ r_i \le 0, \quad i=1,2,\cdots, m, \\
+\text{s.t.} \quad & \frac{1}{2} x^TQ_ix+ b_i^Tx+ r_i \le 0, \quad i=1,2, \cdots , m, \\
 & \\|x\\|_\infty \le r,
 \end{aligned}$$
 
-**Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices, $c_i$ are constraints constants for $i=1,cdots,m$, $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint.
+**Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices, $c_i$ are constraints constants for $i=1, \cdots ,m$, $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint.
 
 #### **Code Structure**
 * **`run_code.py`**: running QCQP experiments, supporting tests for different $p$ values and $\beta_0$ settings.
