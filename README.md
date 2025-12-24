@@ -13,7 +13,7 @@ $$
 </p>
 ---
 
-## 📄 1. Reference Paper
+## 1. Reference Paper
 The implementations in this repository are based on the following research paper:
 * **Paper Title**: Complexity and convergence analysis of a
 single-loop SDCAM for Lipschitz composite
@@ -22,7 +22,7 @@ optimization and beyond
 
 ---
 
-## 💻 2. Environment & Requirements
+## 2. Environment & Requirements
 
 ### **Python Version**
 Required: `Python 3.8` or higher.
@@ -41,9 +41,7 @@ Required: `Python 3.8` or higher.
 
 Mathematical Formulation
 The objective is to solve the following optimization problem:
-\[
-    \min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambda \|v\|_1,
-\]
+$$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambda \|v\|_1,$$
 Where:
 
 $x \in \mathbb{R}^n$: represents the MLP parameters.
