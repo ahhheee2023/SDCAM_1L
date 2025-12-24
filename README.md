@@ -56,3 +56,24 @@ $$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambd
 #### **Usage**
 ```bash
 python main.py
+
+
+### **Project 2: MLP**
+<font size="4">Implementation of the algorithm for solving a penalized Quadratically Constrained Quadratic Program (QCQP).</font>
+
+#### **Mathematical Formulation**
+The objective is to solve the following optimization problem:
+
+$$\min_{x} \frac{1}{2} x^T Q_0 x + b_0^T x + \alpha \|x\|_p^p \quad \text{s.t. } \frac{1}{2} x^T Q_i x + b_i^T x + c_i \le 0, \quad \|x\|_\infty \le r$$
+
+**Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices constructed via random orthogonal matrices and diagonal matrices, $c_i$ are constraints constants derived from a reference minimizer $\bar{x}$, $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint defined by $\|\bar{x}\|_\infty$.
+
+#### **Code Structure**
+* ** `run_code.py`**: The main script to execute QCQP experiments, supporting tests for different $p$ values and $\beta_0$ settings.
+* **`sdcam_1l.py`**:  Core solver implementing the $\text{SDCAM}_{\mathbb{1}\ell}$ algorithm for the QCQP model, including feasibility checks and dual variable updates.
+* **`create_problem3.py`**: Generates the synthetic QCQP problem instance, including matrices $Q_i$, vectors $b_i$, and the reference point $\bar{x}$.
+* **`lp_prox_mapping.py`**: Implements the Newton-based root-finding scheme for the $L_p$ proximal mapping with $\ell_\infty$ norm constraints.
+
+#### **Usage**
+```bash
+python run_code.py
