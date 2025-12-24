@@ -1,9 +1,11 @@
 # <h1 align="center">SDCAM Numerical Experiments</h1>
 
-<p align="center">
+# <h1 align="center">SDCAM Numerical Experiments</h1>
+
+<div align="center">
   <b>Implementation of the SDCAM$_{\mathds{1}\ell}$ Algorithm</b><br>
   <i>Verified on Python 3.8+ | Powered by JAX & NumPy</i>
-</p>
+</div>
 
 ---
 
