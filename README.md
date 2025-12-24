@@ -41,7 +41,7 @@ Required: `Python 3.8` or higher.
 #### **Mathematical Formulation**
 The objective is to solve the following optimization problem:
 
-$$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambda \|v\|_1$$
+$$\min_{v} \frac1m\sum_{i =1}^m \rho\left({\rm MLP}(a_i;v) - y_i\right) + \lambda \\|v\\|_1$$
 
 **Where** $v$ represents the MLP parameters, $m$ represents the number of samples in the dataset, $\rho(u) = \frac{|u|^p}{p}$ is the loss function where $0 < p \le 1$, $C$ is the $\ell_\infty$-ball constraint, and $\lambda$ is the regularization coefficient for $L_1$ penalty.
 
