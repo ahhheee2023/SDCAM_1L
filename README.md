@@ -74,10 +74,10 @@ $$\begin{aligned}
 **Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices, $c_i$ are constraints constants , $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint.
 
 #### **Code Structure**
-* **`run_code.py`**: The main script to execute QCQP experiments, supporting tests for different $p$ values and $\beta_0$ settings.
-* **`sdcam_1l.py`**:  Core solver implementing the $\text{SDCAM}_{\mathbb{1}\ell}$ algorithm for the QCQP model, including feasibility checks and dual variable updates.
-* **`create_problem3.py`**: Generates the synthetic QCQP problem instance, including matrices $Q_i$, vectors $b_i$, and the reference point $\bar{x}$.
-* **`lp_prox_mapping.py`**: Implements the Newton-based root-finding scheme for the $L_p$ proximal mapping with $\ell_\infty$ norm constraints.
+* **`run_code.py`**: running QCQP experiments, supporting tests for different $p$ values and $\beta_0$ settings.
+* **`sdcam_1l.py`**:  Core solver implementing the $\text{SDCAM}_{\mathbb{1}\ell}$ algorithm for the QCQP model.
+* **`create_problem3.py`**: Generating the  QCQP problem instance, including matrices $Q_i$, vectors $b_i$, for $i=0,cdots,m$, and the $r$.
+* **`lp_prox_mapping.py`**: Implementing the Newton-based root-finding scheme for the $\ell_p$ proximal mapping with $\ell_\infty$ norm constraints.
 
 #### **Usage**
 ```bash
