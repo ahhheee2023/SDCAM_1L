@@ -71,7 +71,7 @@ $$\begin{aligned}
 & \|x\|_\infty \le r
 \end{aligned}$$
 
-**Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices constructed via random orthogonal matrices and diagonal matrices, $c_i$ are constraints constants derived from a reference minimizer $\bar{x}$, $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint defined by $\|\bar{x}\|_\infty$.
+**Where** $Q_0$ is the identity matrix, $b_0$ is a scaled vector with standard Gaussian entries, $Q_i$ are positive semi-definite matrices, $c_i$ are constraints constants , $\alpha$ is the regularization parameter, and $r$ is the radius of the $\ell_\infty$-ball constraint.
 
 #### **Code Structure**
 * ** `run_code.py`**: The main script to execute QCQP experiments, supporting tests for different $p$ values and $\beta_0$ settings.
