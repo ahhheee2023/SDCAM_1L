@@ -60,8 +60,8 @@ def SDCAM_1L(x_t: np.ndarray, y_t: np.ndarray, beta_0: float, last_mu: float,
         quadratic_terms = 0.5 * np.sum(x_t * Qx_reshaped, axis=1)
         linear_terms = problem['bi'] @ x_t
         c_xt = quadratic_terms + linear_terms + problem['ci']
-        print(f"x_t shape: {x_t.shape}")
-        print(f"Qx_reshaped shape: {Qx_reshaped.shape}")
+        # print(f"x_t shape: {x_t.shape}")
+        # print(f"Qx_reshaped shape: {Qx_reshaped.shape}")
 
         # Compute gradient of f
         grad_f = Q0_sym @ x_t + problem['b0']
@@ -119,7 +119,7 @@ def SDCAM_1L(x_t: np.ndarray, y_t: np.ndarray, beta_0: float, last_mu: float,
         c_x_next = c_tilde_x
         ci_abs = np.abs(problem['ci'])
         ci_abs[ci_abs == 0] = 1
-        rel_feas_current = np.linalg.norm(np.maximum(c_x_next, 0) / ci_abs)
+        rel_feas_current = np.linalg.norm(np.maximum(c_x_next, 0) /np.maximum(ci_abs,1))
 
         # Record history
         history['iterations'].append(t + 1)
