@@ -59,7 +59,7 @@ def create_problem3(n: int, m: int, alpha: float, p: float):
     problem['bi'] = bi
     problem['ci'] = ci
     problem['b0'] = b0
-    problem['r'] = np.max(np.abs(b0))  # infinity norm
+    problem['r'] = np.max(np.abs(x0))  # infinity norm
     print(f'The inf norm is {problem['r']:2.1e}')
 
     return problem
